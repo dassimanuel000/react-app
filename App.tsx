@@ -1,22 +1,19 @@
 import React from 'react';
-import { AppRegistry } from 'react-native';
-
-AppRegistry.registerComponent('estiam', () => App);
 import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
-import Page1 from './pages/Page1';
-import Page2 from './pages/Page2';
-import Page3 from './pages/Page3';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import HomeScreen from './pages/HomeScreen';  
+import TaskScreen from './pages/TaskScreen';  
+import ProfileScreen from './pages/ProfileScreen';  
 
-const Stack = createStackNavigator();
+const Stack = createNativeStackNavigator();
 
 const App = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name="Page1" component={Page1} />
-        <Stack.Screen name="Page2" component={Page2} />
-        <Stack.Screen name="Page3" component={Page3} />
+      <Stack.Navigator initialRouteName="Home">
+        <Stack.Screen name="Home" component={HomeScreen} options={{ title: 'Liste de voeux' }}/>
+        <Stack.Screen name="Task" component={TaskScreen} options={{ title: 'Créer/Modifier votre liste' }}/>
+        <Stack.Screen name="Profile" component={ProfileScreen} options={{ title: 'Profil' }}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
