@@ -25,7 +25,7 @@ Cette application React Native permet aux utilisateurs d'envoyer leurs vœux au 
 1. Clonez le dépôt Git :
 
     ```
-    git clone https://example.com/voeux-pere-noel.git
+    git clone https://github.com/dassimanuel000/react-test.git
     ```
 
 2. Installez les dépendances :
@@ -48,11 +48,9 @@ Cette application React Native permet aux utilisateurs d'envoyer leurs vœux au 
 ## Structure du Projet
 
 - `/android` et `/ios` : Codes spécifiques aux plateformes.
-- `/components` : Composants réutilisables.
-- `/screens` : Composants de l'écran de l'application.
+- `/pages` : Composants de l'écran de l'application.
 - `/assets` : Images et autres ressources statiques.
-- `/utils` : Fonctions utilitaires.
-- `/database` : Scripts pour la base de données SQLite.
+- `./pages/database` : Scripts pour la base de données SQLite.
 
 ## Authentification
 
@@ -64,11 +62,37 @@ Détails sur la configuration et l'utilisation des notifications push.
 
 ## Cache de Données/Images
 
-Méthodes utilisées pour le caching des données et des images.
+
+```
+<FastImage
+   style={styles.image}
+   source={{
+   uri: imageUrl,
+   headers: { Authorization: 'someAuthToken' },
+   priority: FastImage.priority.normal,
+   }}
+   resizeMode={FastImage.resizeMode.contain}
+/>
+
+```
 
 ## Utilisation de Code Natif
 
-Exemples d'intégration de code natif dans l'application.
+
+```
+import SQLite from 'react-native-sqlite-storage';
+
+const database = await SQLite.openDatabase(
+"VoeuxDB.db",
+"1.0",
+"SQLite React Offline Database",
+200000
+);
+setDb(database);
+
+```
+
+
 
 ## Tests Unitaires
 
