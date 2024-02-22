@@ -1,6 +1,4 @@
-Bien sûr, voici un exemple de `README.md` pour votre application d'envoi de vœux au Père Noël. Ce modèle inclut les sections qui couvrent les exigences de votre projet :
 
-```markdown
 # Application d'Envoi de Vœux au Père Noël
 
 Cette application React Native permet aux utilisateurs d'envoyer leurs vœux au Père Noël. Elle utilise React Native CLI pour la création et la gestion du projet, en adhérant aux bonnes pratiques de développement et de structure de projet.
