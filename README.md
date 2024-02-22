@@ -76,7 +76,10 @@ Détails sur la configuration et l'utilisation des notifications push.
 
 ```
 
-## Utilisation de Code Natif
+## Utilisation de Code Natif Firebase configuration
+
+![image](https://github.com/dassimanuel000/react-test/assets/58192026/952eb2ca-9cec-420e-8826-d35d0fd95098)
+
 
 
 ```
