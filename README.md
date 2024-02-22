@@ -76,11 +76,13 @@ Détails sur la configuration et l'utilisation des notifications push.
 
 ```
 
-## Utilisation de Code Natif Firebase configuration
+## Utilisation de Code Natif Firebase configuration PARDON CECI ETAIT COMPLIQUE POUR MOI MAIS CA FONCTIONNE
 
 ![image](https://github.com/dassimanuel000/react-test/assets/58192026/952eb2ca-9cec-420e-8826-d35d0fd95098)
 
+![image](https://github.com/dassimanuel000/react-test/assets/58192026/799cd08e-5244-473a-9fb1-6e277ba01639)
 
+![image](https://github.com/dassimanuel000/react-test/assets/58192026/5908c3e8-3195-497b-b527-fdb4da6757ea)
 
 ```
 import SQLite from 'react-native-sqlite-storage';
@@ -120,5 +122,10 @@ Manuel dassi
 
 ## Licence
 
-```
 
+#### une bonne commande pour nettoyer react native sur android
+
+```
+ cd android && ./gradlew clean && cd ..
+
+```
