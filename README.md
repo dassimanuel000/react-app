@@ -75,6 +75,31 @@ Détails sur la configuration et l'utilisation des notifications push.
 />
 
 ```
+## integrer une fonctionnalité native ( ex calendrier ... )
+
+D:\Documents\ESTIAM\react\estiam\pages\Calendrier.js et dans le manifest
+
+```
+<uses-permission android:name="android.permission.READ_CALENDAR" />
+<uses-permission android:name="android.permission.WRITE_CALENDAR" />
+
+```
+CODE 
+```
+const Calendrier = () => {
+  useEffect(() => {
+    // Demander la permission au montage du composant
+    RNCalendarEvents.requestPermissions(true)
+      .then(status => {
+        console.log('Permission status:', status);
+      })
+      .catch(error => {
+        console.error(error);
+      });
+  }, []);
+```
+![image](https://github.com/dassimanuel000/react-test/assets/58192026/7206b41d-377d-45d1-9ce9-b5978d7ec92f)
+
 
 ## Utilisation de Code Natif Firebase configuration PARDON CECI ETAIT COMPLIQUE POUR MOI MAIS CA FONCTIONNE
 
